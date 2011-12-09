@@ -17,3 +17,19 @@
 	} );
 } ) ( jQuery );
 ```
+or something like this
+
+
+```javascript
+( function( $ ) {
+	$( function() {
+		$.jVimeo( 'DiliBau', 'videos', function( data ) {
+			$.each( data, function( k, row ) {				
+				$( 'div.vimeo_data' ).append(
+					'<p><a href="' + row.url + '" target="_blank">' + row.title + '</a></p>';
+				);
+			} );
+		} );
+	} );
+} ) ( jQuery );
+```
