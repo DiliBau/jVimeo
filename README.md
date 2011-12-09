@@ -1,4 +1,4 @@
-# Usage ===
+# Usage
 
 1. include jquery ( the latest )
 2. include jquery.jVimeo.js
