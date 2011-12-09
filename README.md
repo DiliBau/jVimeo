@@ -7,34 +7,34 @@ A simple jQuery plugin that will allow you to make Vimeo user requests.
 2. include jquery.jVimeo.js
 3. do something like this:
 
-```javascript
-( function( $ ) {
-	$( function() {
-		$.jVimeo( 'DiliBau', function( data ) {
-			$.each( data, function( k, row ) {				
-				$( 'div.vimeo_data' ).append(
-					'<p><a href="' + row.url + '" target="_blank">' + row.title + '</a></p>';
-				);
+	```javascript
+	( function( $ ) {
+		$( function() {
+			$.jVimeo( 'DiliBau', function( data ) {
+				$.each( data, function( k, row ) {				
+					$( 'div.vimeo_data' ).append(
+						'<p><a href="' + row.url + '" target="_blank">' + row.title + '</a></p>';
+					);
+				} );
 			} );
 		} );
-	} );
-} ) ( jQuery );
-```
-or something like this
+	} ) ( jQuery );
+	```
+	or something like this
 
-```javascript
-( function( $ ) {
-	$( function() {
-		$.jVimeo( 'DiliBau', 'videos', function( data ) {
-			$.each( data, function( k, row ) {				
-				$( 'div.vimeo_data' ).append(
-					'<p><a href="' + row.url + '" target="_blank">' + row.title + '</a></p>';
-				);
+	```javascript
+	( function( $ ) {
+		$( function() {
+			$.jVimeo( 'DiliBau', 'videos', function( data ) {
+				$.each( data, function( k, row ) {				
+					$( 'div.vimeo_data' ).append(
+						'<p><a href="' + row.url + '" target="_blank">' + row.title + '</a></p>';
+					);
+				} );
 			} );
 		} );
-	} );
-} ) ( jQuery );
-```
+	} ) ( jQuery );
+	```
 4. the function takes 2 or 3 arguments. If 2 arguments are passed they will be 1 the username and the callback or if 3, the username, the request to make and the callback
 5. available user requests: ( Read more here : http://vimeo.com/api/docs/simple-api )
 	* info - User info for the specified user
